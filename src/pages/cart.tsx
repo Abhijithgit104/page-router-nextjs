@@ -1,7 +1,7 @@
 "use client";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import styles from "../styles/cart.module.css";
+import styles from "@/styles/cart.module.css";
 
 export default function Cart() {
   const { cart, removeFromCart } = useContext(CartContext);

@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import styles from "../../styles/product.module.css";
+import styles from "@/styles/product.module.css";
 import GotoCartButton from "../../components/GotoCartButton";
 import { ProductService } from "../../services/products-services";
 
