@@ -1,32 +1,22 @@
-import { cookies, headers } from "next/headers";
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-
-export async function GET(request: Request) {
-    const data = [{
-        id:1,
-        title: 'T-Shirts'
-    }];
-
-    const cookieList = await cookies();
-    const tokenCookie = cookieList.get('authToken');
-    console.log("tokenCookie :", tokenCookie)
-  return Response.json({ data })
+type Data = {
+  message: string
+  timestamp: string
 }
 
-export async function POST(request: Request){
-    const prod = await request.json();
-    const cookieList = await cookies();
-    const tokenCookie = cookieList.get('authToken');
-    console.log("tokenCookie :", tokenCookie);
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
 
-    const headerList = await headers();
-    console.log("Authorization", headerList.get('Authorization'));
-
-    const data = [{
-        id:1,
-        title: 'T-Shirt',
-        prod: prod
-    }];
-
-    return Response.json({ data })
+  if (req.method === 'GET') {
+    res.status(200).json({
+      message: '👋 Hello from Next.js API Route!',
+      timestamp: new Date().toISOString(),
+    })
+  } else {
+    res.setHeader('Allow', ['GET'])
+    res.status(405).end(`Method ${req.method} Not Allowed`)
+  }
 }
