@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import styles from "../styles/nav.module.css"
 import { CartProvider } from "../context/CartContext";
 import { AppProps } from "next/app";
 import Header from "@/components/Header";

@@ -2,7 +2,7 @@
 // import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import styles from '@/styles/home.module.css';
+import styles from "../../src/styles/home.module.css";
 
 export default function Home() {
   const [products, setProducts] = useState<any[]>([]);
