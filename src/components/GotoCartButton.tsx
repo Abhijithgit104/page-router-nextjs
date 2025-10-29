@@ -1,6 +1,6 @@
-// "use client";
 import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
+import styles from "../styles/product.module.css"
 
 export default function GotoCartButton({ product }: any) {
   const { addToCart } = useContext(CartContext);
@@ -11,7 +11,7 @@ export default function GotoCartButton({ product }: any) {
   };
 
   return (
-    <button
+    <button className={styles.button}
       onClick={handleAdd}
       style={{
         padding: "10px 20px",
