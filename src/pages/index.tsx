@@ -1,7 +1,7 @@
 // "use client";
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import styles from "../styles/home.module.css";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const [products, setProducts] = useState<any[]>([]);
