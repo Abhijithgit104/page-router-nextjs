@@ -10,6 +10,7 @@
   padding: 10px;
   text-align: center;
   transition: 0.3s;
+  height: 250px;
 }
 .card:hover {
   transform: scale(1.05);

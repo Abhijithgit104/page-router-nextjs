@@ -1,8 +1,7 @@
-"use client";
-// import "../styles/globals.css";
+// "use client";
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import styles from "../../src/styles/home.module.css";
+import styles from "../styles/home.module.css";
 
 export default function Home() {
   const [products, setProducts] = useState<any[]>([]);
@@ -12,6 +11,7 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+  console.log("Styles applied",styles)
 
   return (
     <div className={styles.home}>

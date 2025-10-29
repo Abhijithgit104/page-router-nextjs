@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { useEffect, useState } from "react";
 import ProductCard from "../../components/ProductCard";
 import styles from "@/styles/product.module.css";

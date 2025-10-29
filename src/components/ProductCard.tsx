@@ -1,6 +1,6 @@
 // "use client";
 import Link from "next/link";
-import styles from "@/styles/product.module.css";
+import styles from "../styles/product.module.css";
 
 export default function ProductCard({ product }: any) {
   return (
